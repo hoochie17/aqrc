@@ -1,0 +1,11 @@
+{
+  "name": "onewayhash",
+  "version": "1.0.0",
+  "description": "convert string to hash",
+  "main": "onewayhash.js",
+  "scripts": {
+    "test": "node onewayhash.js"
+  },
+  "author": "Joey Hutch",
+  "license": "ISC"
+}

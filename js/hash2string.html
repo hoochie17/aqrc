@@ -1,0 +1,62 @@
+<html>
+    <!DOCTYPE html>
+    
+    <head lang="en">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Hash2Sting Console</title>
+
+        <script src="sha1.js"></script>
+        <script src="sha256.js"></script>
+
+    </head>
+    
+    <body>
+    
+
+    <div class="indented">
+        <table width="100%">
+            <tr><th>Input</th><td>
+                <textarea cols="20" id="input" name="input" rows="2" style="width:80%"></textarea>
+            </td></tr>
+      <tr><th>Method (Hex)</th>
+      <td style="text-align:center">
+            <input type="button" onclick="document.getElementById('hash').value = hex_sha1(document.getElementById('input').value)" value="SHA-1">
+           <input type="button" onclick="document.getElementById('hash').value = hex_sha256(document.getElementById('input').value)" value="SHA-256">
+    
+      </td></tr>
+
+      <tr><th>Method (Base64)</th>
+        <td style="text-align:center">
+            <input type="button" onclick="document.getElementById('hash').value = b64_sha1(document.getElementById('input').value)" value="SHA-1">
+             <input type="button" onclick="document.getElementById('hash').value = b64_sha256(document.getElementById('input').value)" value="SHA-256">
+      
+        </td></tr>
+
+      <tr><th>Result</th><td>
+        <textarea cols="20" id="hash" name="hash" rows="2" style="width:80%"></textarea>
+             </td></tr>
+
+    </table>
+    
+    </div>
+
+    <h3 align="center">Decrypt Hash</h3>
+    <p align="center">
+        <textarea cols="20" id="text" name="text" rows="2" style="width:80%;background-color:#33FF99"></textarea>
+       
+       <br>
+    
+       <input type="button" name="decrypt" value=" Decrypt " onclick="Decrypt_text();">
+       &nbsp;
+    
+       <input type="button" value=" Clear " onclick="document.cipher.text.value = '';">
+       &nbsp;
+    
+       <input type="button" value=" Select " onclick="document.cipher.text.select();">
+       </p>
+       
+       <script src="dehash.js"></script>
+    </body>
+</html>

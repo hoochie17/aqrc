@@ -1,0 +1,55 @@
+<html>
+<!DOCTYPE html>
+
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title> JS and Firebase Console</title>
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/8.2.2/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.2/firebase-database.js"></script>
+    <script src="js/main.js"></script>
+</head>
+
+<body>
+    <button id="connector">Connect to firebase</button>
+    <div id="res">
+    </div>
+
+</body>
+
+
+<script>
+    document.getElementById('connector').onclick = function() {
+        myFunction();
+        document.getElementById('connector').innerHTML = "Connected to firebase console";
+    }
+</script>
+
+
+<script type="text/javascript" src="/sha1.js"></script>  
+<script type="text/javascript" src="/sha256.js"></script>  
+<script type="text/javascript" src="/sha512.js"></script>  
+
+<div class="indented">
+<table width="100%">
+  <tr><th>Input</th><td>
+       @Html.TextArea("input", new { style = "width:80%" })
+                    </td></tr>
+  <tr><th>Method</th>
+  <td style="text-align:center">
+
+  <input type="button" onclick="document.getElementById('hash').value = hex_md5(document.getElementById('input').value)" value="MD5">
+  <input type="button" onclick="document.getElementById('hash').value = hex_sha1(document.getElementById('input').value)" value="SHA-1">
+       <input type="button" onclick="document.getElementById('hash').value = hex_sha256(document.getElementById('input').value)" value="SHA-256">
+       <input type="button" onclick="document.getElementById('hash').value = hex_sha512(document.getElementById('input').value)" value="SHA-512">
+
+  </td></tr>
+  <tr><th>Result</th><td>
+      @Html.TextArea("hash", new { style = "width:80%" })
+
+                     </td></tr>
+</table>
+
+</html>
